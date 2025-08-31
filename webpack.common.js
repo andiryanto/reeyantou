@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
   },
   module: {
@@ -31,7 +31,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{
         from: path.resolve(__dirname, 'src/public/'),
-        to: path.resolve(__dirname, 'dist/'),
+        to: path.resolve(__dirname, 'public/'),
       }],
     }),
     new ServiceWorkerWebpackPlugin({
